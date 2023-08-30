@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block body %}
+    <section>
+        <h2>Access code</h2>
+        <h3>Room: {{ room }}</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <label>
+                <input type="text" name="access_code">
+            </label>
+            <div><a href="{% url 'home' %}">Cancel</a>
+                <button type="submit">Confirm</button>
+            </div>
+        </form>
+    </section>
+
+    <style>
+   section {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, 50%);
+   }
+
+   section
+</style>
+{% endblock %}
+
